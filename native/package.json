@@ -1,0 +1,12 @@
+{
+  "name": "pubsub-testing",
+  "version": "0.0.1",
+  "description": "A sample app pubsub MQTT messaging",
+  "main": "server.js",
+  "author": "",
+  "dependencies": {
+    "mosca": "~0.32.0",
+	"strong-pubsub": "^0.x.x",
+	"strong-pubsub-mqtt": "~0.1.x"
+  }
+}

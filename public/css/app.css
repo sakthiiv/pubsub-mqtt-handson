@@ -1,0 +1,47 @@
+﻿#message-container {
+  position : absolute;
+  bottom : 0;
+  right: 0;
+  margin-top : 40px;
+  margin-right : 40px;
+  display: none;
+}
+
+.heavy {
+  font-size: 86px;
+  font-weight: bold;
+  color: grey;
+}
+
+.container-fluid {
+  width: 85%;
+}
+
+.center {
+  text-align: center;
+}
+
+.seperator {
+  padding: 25px 0;
+}
+
+.published {
+  border-bottom: 1px solid #ccc;
+  width: 98%;
+  float: left;
+}
+
+.code {
+  color: green;
+  font-weight: bold;
+  width: 2%;
+  float: left;
+}
+
+.status-red {
+  color: #BF0808;
+}
+
+.status-green {
+  color: green;
+}

@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<link href="css/libs/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/libs/bootstrap-theme.min.css" rel="stylesheet" />
+		<link href="css/app.css" rel="stylesheet" />
+	</head>
+	<body>
+
+	<script src="js/libs/mqtt.js"></script>
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/libs/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>MQTT - Testing</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label>Server Status - </label>
+				<label id="lblServerStatus"></label>
+			</div>
+		</div>		
+		<div class="row seperator"></div>		
+		<div class="row">
+		  <div class="col-md-9" style="border: 1px solid #5bc0de; border-right: 8px solid #5bc0de; padding: 25px; height: 175px;">
+			<label style="padding: 15px 0;" for="txtMessage">Enter text to notify: </label>
+			<div class="row">
+				<div class="col-md-4">
+					<input class="form-control" id="txtMessage" type="text" placeholder="Sample Text" />
+				</div>
+				<div class="col-md-2">
+					<button id="btnNotify" class="btn btn-success">
+						Notify me!
+					</button>
+				</div>
+			</div>
+		  </div>
+		  <div class="col-md-1">
+		  </div>		  
+		  <div class="col-md-2" style="border: 1px solid grey; height: 175px;">
+			<div class="center">
+				<h4>Connected Clients</h4>
+			</div>
+			<div id="connectedClients" class="heavy center">
+				0
+			</div>
+		  </div>
+		</div>
+		<div class="row seperator"></div>		
+		<div class="row">
+		  <div class="col-md-9" style="border: 1px solid #ec971f; border-right: 8px solid #ec971f; padding: 25px;">
+		  	<div id="publishedMessages" style="height: 200px; overflow-x: auto;">
+		  	</div>	
+		  </div>
+		  <div class="col-md-1">
+		  </div>		  
+		  <div class="col-md-2">
+		  </div>
+		</div>
+	</div>
+		
+	<div id="message-container">
+		<div class="alert alert-success" id="success-alert">
+			<button type="button" class="close" data-dismiss="alert">x</button>
+			<strong>Success! </strong> Product have added to your wishlist.
+		</div>		
+	</div>
+	
+	</body>
+</html>
