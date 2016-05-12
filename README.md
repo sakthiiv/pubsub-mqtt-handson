@@ -3,6 +3,54 @@ pubsub-mqtt-handson
 
 To unveil the capabilities of MQTT protocol (publish subscribe messaging pattern)
 
+### Introduction
+
+##### *What is MQTT?*
+
+* MQTT is a publish/subscribe messaging protocol. It stands for MQ Telemetry Transport.
+* It has been designed to be an extremely simple and lightweight protocol. 
+* The targeted systems for this protocol are devices with extremely constrained network bandwidth and places where networks are unreliable with high-latency. 
+* The protocol standards are to use minimal network bandwidth and reduce battery power of devices while ensuring reliability and assurance in delivery to an extent. 
+* MQTT protocol is ideal for machine-to-machine or Internet of Things (IoT) world of connected devices.
+* It is used on top of TCP/IP protocol.
+
+##### *Security in MQTT*
+
+* Passing user name and password is feasible with an MQTT packet in V3.1 of the protocol. 
+* Network encryption should be handled with SSL which is independent of the MQTT protocol. 
+* Encryption is not built into MQTT protocol as the sole purpose of the protocol was to make it lightweight and simple. 
+* It is worth noting that SSL adds network overhead as it is not a simple protocol. 
+* Additional encryption of messages can be applied by a separate service / application.
+
+##### *Topic*
+
+* Messages are published to a logical channel called as “topics”. 
+* A subscriber can subscribe to a specific topic. All the subscribers for a topic will receive the same message published.
+
+##### *MQTT Specification*
+
+https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt
+
+### Terminologies
+
+##### *Client*
+
+A unified client class (Can be used as a publisher or subscriber) which supports subscribing to topics. It can connect to broker or a bridge which supports the same protocol used by the current client’s adaptor.
+
+##### *Broker*
+
+A broker is a server that acts as a routing system for messages. It routes the messages published to all the subscribed clients.
+[Mosquito](http://mosquitto.org/) is commonly used message broker.
+
+##### *Bridge*
+
+A bridge creates a connection between two MQTT brokers. Bridge can be used in cases where a client should not connect directly to a Broker.
+It helps us to include logic for verifying authenticity of messages and clients.
+
+##### *Adapter*
+
+An Adapter to specify the type of transport and protocol.
+
 ### Dependencies
 
 Follow these steps
@@ -46,3 +94,11 @@ Follow these steps
 ![image](https://cloud.githubusercontent.com/assets/6268662/12031240/a6fc46ec-ae2f-11e5-8d57-20f6395dc268.png)
 
 ***
+
+##### *References*
+
+* http://mqtt.org/
+* http://mqtt.org/faq
+* https://en.wikipedia.org/wiki/MQTT
+* https://strongloop.com/strongblog/introducing-strongloops-unopinionated-pubsub/
+
